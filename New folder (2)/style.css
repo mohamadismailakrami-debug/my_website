@@ -463,3 +463,8 @@ body {
         gap: 15px;
     }
 }
+.navbar {
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    background: rgba(18, 26, 43, 0.4) !important; /* مقداری شفاف‌تر شدن رنگ پس‌زمینه هدر */
+}
