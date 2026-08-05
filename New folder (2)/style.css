@@ -3,42 +3,40 @@
    (با تغییر کد رنگی --bg-main پس‌زمینه کل سایت عوض می‌شود)
    ========================================== */
 :root {
-    /* پس‌زمینه روشن و ملایم */
-    --bg-main: linear-gradient(135deg, #eef2f6 0%, #dbeafe 100%); 
+    /* پس‌زمینه روشن، تمیز و مات */
+    --bg-main: #f8fafc; 
 
     /* رنگ آکسان برند شما */
     --accent-orange: #ff6b00;
     --accent-orange-hover: #e05e00;
 
-    /* کارت شیشه‌ای روشن اصلاح‌شده */
-    --card-bg: rgba(255, 255, 255, 0.75);
-    --card-border: rgba(255, 255, 255, 0.9);
+    /* کارت‌های مدرن و تمیز تم روشن */
+    --card-bg: #ffffff;
+    --card-border: rgba(226, 232, 240, 0.8);
     
-    /* رنگ متن‌ها (تیره برای خوانایی عالی) */
+    /* رنگ متن‌ها با کنتراست عالی و خوانا */
     --text-primary: #0f172a;
-    --text-secondary: #475569;
-    
-    --glass-blur: blur(20px);
+    --text-secondary: #64748b;
 }
 
-/* اصلاح استایل کارت‌های شیشه‌ای برای نمایش برجسته در پس‌زمینه روشن */
+/* استایل کارت‌های تمیز و بدون شیشه‌ی تاریک */
 .glass-card {
     background: var(--card-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
     border: 1px solid var(--card-border);
     border-radius: 18px;
     
-    /* ایجاد سایه نرم برای جدا شدن شیشه از پس‌زمینه روشن */
-    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08),
-                0 4px 6px -2px rgba(15, 23, 42, 0.04);
+    /* سایه چندلایه مدرن (iOS / Apple Style) */
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05),
+                0 2px 6px -1px rgba(15, 23, 42, 0.02);
     
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* افکت Hover روی کارت‌ها */
+/* افکت شناور شدن کارت‌ها هنگام هوور */
 .glass-card:hover {
-    box-shadow: 0 20px 35px -12px rgba(15, 23, 42, 0.12);
+    transform: translateY(-4px);
+    border-color: rgba(255, 107, 0, 0.3); /* هایلایت نارنجی ملایم دور کارت */
+    box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.08);
 }
 
 * {
