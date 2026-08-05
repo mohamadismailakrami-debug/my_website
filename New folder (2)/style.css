@@ -555,6 +555,10 @@ h1, h2, h3 {
         gap: 20px;
     }
 }
+/* ==========================================
+   استایل‌های صفحه نمونه‌کارها (با پشتیبانی کامل موبایل)
+   ========================================== */
+
 :root {
     --bg-color: #0b0f19;
     --card-bg: rgba(255, 255, 255, 0.05);
@@ -569,97 +573,112 @@ h1, h2, h3 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     min-height: 100vh;
-    padding: 20px;
+    padding: 15px;
     overflow-x: hidden;
     position: relative;
 }
 
-/* پس‌زمینه‌های نوری برای ایجاد افکت Glassmorphism */
+/* پس‌زمینه‌های نوری */
 .bg-glow {
     position: fixed;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    filter: blur(100px);
+    filter: blur(90px);
     z-index: -1;
+    pointer-events: none;
 }
-.glow-1 { top: -50px; right: -50px; background: rgba(0, 122, 255, 0.3); }
-.glow-2 { bottom: -50px; left: -50px; background: rgba(142, 68, 173, 0.25); }
+.glow-1 { top: -40px; right: -40px; background: rgba(0, 122, 255, 0.25); }
+.glow-2 { bottom: -40px; left: -40px; background: rgba(142, 68, 173, 0.2); }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
 }
 
-/* استایل عمومی کارت‌های شیشه‌ای */
+/* استایل کارت شیشه‌ای */
 .glass-card {
     background: var(--card-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border: 1px solid var(--card-border);
-    border-radius: 20px;
+    border-radius: 16px;
 }
 
 /* هدر */
 .page-header {
-    padding: 30px;
-    margin-bottom: 25px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .back-btn {
     color: var(--accent-color);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .page-header h1 {
-    font-size: 2rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+    word-break: break-word;
 }
 
 .page-header p {
     color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 /* فیلترها */
 .filter-container {
     display: flex;
-    gap: 10px;
-    padding: 12px;
-    margin-bottom: 30px;
+    gap: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
     overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* مخفی کردن اسکرول‌بار در فایرفاکس */
+}
+
+.filter-container::-webkit-scrollbar {
+    display: none; /* مخفی کردن اسکرول‌بار در کروم و سافاری */
 }
 
 .filter-btn {
     background: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: var(--text-secondary);
-    padding: 8px 18px;
-    border-radius: 12px;
+    padding: 8px 14px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    flex-shrink: 0;
 }
 
 .filter-btn.active, .filter-btn:hover {
     background: rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* شبکه کارت‌ها */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
 }
 
 .project-card {
@@ -667,15 +686,10 @@ body {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
 .card-image {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -687,30 +701,30 @@ body {
 
 .badge {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px);
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
 }
 
 .card-content {
-    padding: 20px;
+    padding: 16px;
 }
 
 .card-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
 }
 
 .card-content p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .project-link {
@@ -718,4 +732,35 @@ body {
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
+}
+
+/* ==========================================
+   استایل‌های اختصاصی برای صفحه نمایش موبایل
+   ========================================== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .page-header {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* تک ستونه شدن تمام کارت‌ها در موبایل */
+        gap: 15px;
+    }
+
+    .glass-card {
+        border-radius: 12px;
+    }
+
+    .card-image {
+        height: 160px;
+    }
 }
