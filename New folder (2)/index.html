@@ -3,70 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمد اسماعیل اکرمی | طراح UI/UX و گرافیک</title>
+    <title>محمد اسماعیل اکرمی | طراح گرافیک و UI/UX</title>
+    <!-- آیکون‌های FontAwesome برای آیکون‌های کارت‌ها و شبکه‌های اجتماعی -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- پس‌زمینه نوری برای افکت شیشه‌ای -->
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
-
-    <div class="container">
-        <!-- هدر و پروفایل -->
-        <header class="hero-section glass-card">
-            <div class="profile-info">
-                <h1>محمد اسماعیل اکرمی</h1>
-                <h2>طراح UI/UX و طراح گرافیک</h2>
-                <p>خلاقیت در طراحی رابط‌های کاربری مدرن، زیبا و مینیمال با تمرکز بر تجربه کاربری استاندارد.</p>
-                <div class="hero-buttons">
-                    <a href="projects.html" class="btn primary-btn">مشاهده نمونه‌کارها</a>
-                    <a href="#contact" class="btn secondary-btn">ارتباط با من</a>
-                </div>
+    <div class="site-wrapper">
+        <!-- هدر و نوبار -->
+        <header class="navbar glass-card">
+            <div class="logo">
+                <span class="logo-accent">Akrami Design</span>
+                <span class="logo-sub">Graphic Designer</span>
             </div>
+            <nav class="nav-links">
+                <a href="#" class="active">خانه</a>
+                <a href="#portfolio">نمونه کارها</a>
+                <a href="#about">درباره من</a>
+                <a href="#skills">مهارت‌ها</a>
+                <a href="#contact">تماس با من</a>
+            </nav>
+            <a href="projects.html" class="btn btn-orange">مشاهده نمونه کارها ←</a>
         </header>
 
-        <!-- بخش آمار و خلاصه‌کار -->
-        <section class="stats-grid">
-            <div class="stat-card glass-card">
-                <span class="stat-num">+۲۰</span>
-                <span class="stat-title">پروژه موفق</span>
+        <!-- بخش هیرو (معرفی) -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>طراحی نسل آینده را <br><span class="orange-text">امروز</span> تجربه کنید</h1>
+                    <h2 class="hero-subtitle">محمد اسماعیل اکرمی | طراح گرافیک</h2>
+                    <p class="hero-desc">طراحی پوستر، محتوای تبلیغاتی، طراحی شبکه‌های اجتماعی و هویت بصری با رویکردی خلاقانه</p>
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn btn-orange">مشاهده نمونه کارها ←</a>
+                        <a href="#" class="btn btn-outline"><i class="fa-solid fa-download"></i> دانلود رزومه</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400" alt="Workspace Akrami Design">
+                </div>
             </div>
-            <div class="stat-card glass-card">
-                <span class="stat-num">۱۰۰٪</span>
-                <span class="stat-title">رضایت مشتریان</span>
-            </div>
-            <div class="stat-card glass-card">
-                <span class="stat-num">UI/UX</span>
-                <span class="stat-title">تخصص اصلی</span>
+
+            <!-- آمار -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <h3>+100</h3>
+                    <p>مشتری راضی</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+5</h3>
+                    <p>سال تجربه</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+150</h3>
+                    <p>پروژه انجام شده</p>
+                </div>
             </div>
         </section>
 
-        <!-- بخش خدمات -->
-        <section class="services-section">
-            <h2 class="section-title">خدمات من</h2>
-            <div class="services-grid">
-                <div class="service-card glass-card">
-                    <h3>طراحی رابط کاربری (UI)</h3>
-                    <p>طراحی ظاهر اپلیکیشن و وب‌سایت با استایل‌های مدرن مانند Glassmorphism و iOS style.</p>
+        <!-- بخش نمونه کارهای منتخب -->
+        <section id="portfolio" class="section">
+            <div class="section-header">
+                <div>
+                    <h2>نمونه کارهای <span class="orange-text">منتخب</span></h2>
+                    <p>مجموعه‌ای از بهترین و جدیدترین آثار طراحی</p>
                 </div>
-                <div class="service-card glass-card">
-                    <h3>تجربه کاربری (UX)</h3>
-                    <p>تحقیق، ساخت وایرفریم و بهبود مسیر کاربر برای افزایش نرخ تبدیل و سادگی استفاده.</p>
+                <a href="projects.html" class="btn btn-outline">مشاهده همه نمونه کارها ←</a>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- کارت ۱ -->
+                <div class="portfolio-card glass-card">
+                    <img src="https://via.placeholder.com/300x400" alt="پوسترهای تبلیغاتی">
+                    <div class="card-overlay">
+                        <div class="card-info">
+                            <i class="fa-solid fa-bullhorn card-icon"></i>
+                            <h3>پوسترهای تبلیغاتی</h3>
+                            <span>محصول • برندینگ</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card glass-card">
-                    <h3>هویت بصری و گرافیک</h3>
-                    <p>طراحی لوگو، پالت رنگی، بنرهای تبلیغاتی و دفترچه برند به‌صورت کاملاً اختصاصی.</p>
+
+                <!-- کارت ۲ -->
+                <div class="portfolio-card glass-card">
+                    <img src="https://via.placeholder.com/300x400" alt="پوسترهای مذهبی">
+                    <div class="card-overlay">
+                        <div class="card-info">
+                            <i class="fa-solid fa-mosque card-icon"></i>
+                            <h3>پوسترهای مذهبی</h3>
+                            <span>فرهنگی • مناسبتی</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- کارت ۳ -->
+                <div class="portfolio-card glass-card">
+                    <img src="https://via.placeholder.com/300x400" alt="طراحی شبکه‌های اجتماعی">
+                    <div class="card-overlay">
+                        <div class="card-info">
+                            <i class="fa-brands fa-instagram card-icon"></i>
+                            <h3>طراحی شبکه‌های اجتماعی</h3>
+                            <span>Instagram • Telegram</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- کارت ۴ -->
+                <div class="portfolio-card glass-card">
+                    <img src="https://via.placeholder.com/300x400" alt="کاور یوتیوب">
+                    <div class="card-overlay">
+                        <div class="card-info">
+                            <i class="fa-brands fa-youtube card-icon"></i>
+                            <h3>کاور یوتیوب</h3>
+                            <span>Thumbnail • Cover</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- کارت ۵ -->
+                <div class="portfolio-card glass-card">
+                    <img src="https://via.placeholder.com/300x400" alt="طراحی چاپ">
+                    <div class="card-overlay">
+                        <div class="card-info">
+                            <i class="fa-solid fa-print card-icon"></i>
+                            <h3>طراحی چاپ</h3>
+                            <span>بروشور • کارت ویزیت</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- بخش تماس -->
-        <footer id="contact" class="footer-section glass-card">
-            <h2>ارتباط با من</h2>
-            <p>آماده همکاری در پروژه‌های جدید شما هستم.</p>
-            <div class="contact-links">
-                <a href="projects.html" class="project-link">مشاهده تمام پروژه‌ها ←</a>
+        <!-- بخش مهارت‌ها و تخصص‌ها -->
+        <section id="skills" class="section">
+            <div class="section-title-center">
+                <h2>مهارت‌ها و <span class="orange-text">تخصص‌ها</span></h2>
+                <p>ابزارها و زمینه‌های تخصصی فعالیت من</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card glass-card">
+                    <i class="fa-solid fa-paint-brush skill-icon"></i>
+                    <h3>Adobe Photoshop</h3>
+                    <span>Photo Editing</span>
+                </div>
+                <div class="skill-card glass-card">
+                    <i class="fa-solid fa-layer-group skill-icon"></i>
+                    <h3>طراحی پوستر</h3>
+                    <span>Poster Design</span>
+                </div>
+                <div class="skill-card glass-card">
+                    <i class="fa-solid fa-desktop skill-icon"></i>
+                    <h3>طراحی محتوای دیجیتال</h3>
+                    <span>Digital Content</span>
+                </div>
+                <div class="skill-card glass-card">
+                    <i class="fa-solid fa-rectangle-ad skill-icon"></i>
+                    <h3>طراحی تبلیغاتی</h3>
+                    <span>Advertising Design</span>
+                </div>
+                <div class="skill-card glass-card">
+                    <i class="fa-solid fa-print skill-icon"></i>
+                    <h3>طراحی چاپ</h3>
+                    <span>Print Design</span>
+                </div>
+                <div class="skill-card glass-card">
+                    <i class="fa-solid fa-video skill-icon"></i>
+                    <h3>ویرایش ویدئو</h3>
+                    <span>Adobe Premiere</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش درباره من -->
+        <section id="about" class="section glass-card about-section">
+            <div class="about-grid">
+                <div class="about-stats">
+                    <div class="about-stat-box">
+                        <i class="fa-solid fa-trophy orange-text"></i>
+                        <div>
+                            <h4>+5</h4>
+                            <p>سال تجربه حرفه‌ای</p>
+                        </div>
+                    </div>
+                    <div class="about-stat-box">
+                        <i class="fa-solid fa-briefcase orange-text"></i>
+                        <div>
+                            <h4>+150</h4>
+                            <p>پروژه موفق</p>
+                        </div>
+                    </div>
+                    <div class="about-stat-box">
+                        <i class="fa-solid fa-users orange-text"></i>
+                        <div>
+                            <h4>+100</h4>
+                            <p>مشتری و همکاری</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-img">
+                    <img src="https://via.placeholder.com/400x300" alt="Workspace Akrami">
+                </div>
+
+                <div class="about-text">
+                    <h2>درباره <span class="orange-text">من</span></h2>
+                    <p>من یک طراح گرافیک خلاق هستم که در زمینه طراحی پوستر، محتوای تبلیغاتی و پروژه‌های فرهنگی فعالیت می‌کنم.</p>
+                    <p>هدف من خلق طرح‌هایی است که پیام شما را به بهترین شکل منتقل کنند و تأثیری ماندگار در ذهن مخاطب ایجاد نمایند.</p>
+                    
+                    <div class="about-features">
+                        <span><i class="fa-solid fa-check orange-text"></i> خلاقیت در طراحی</span>
+                        <span><i class="fa-solid fa-clock orange-text"></i> تحویل به موقع</span>
+                        <span><i class="fa-solid fa-gem orange-text"></i> کیفیت حرفه‌ای</span>
+                    </div>
+                    
+                    <a href="projects.html" class="btn btn-outline" style="margin-top: 15px;">بیشتر درباره من ←</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- بنر انتهایی (شروع پروژه) -->
+        <section id="contact" class="cta-banner glass-card">
+            <div class="cta-content">
+                <h2>برای شروع یک <span class="orange-text">پروژه خلاقانه</span> آماده‌اید؟</h2>
+                <p>بیایید با هم ایده‌های شما را به طرح‌های ماندگار تبدیل کنیم.</p>
+            </div>
+            <a href="#" class="btn btn-orange"><i class="fa-solid fa-paper-plane"></i> ارتباط با من</a>
+        </section>
+
+        <!-- فوتر -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="logo">
+                    <span class="logo-accent">Akrami Design</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">خانه</a>
+                    <a href="#portfolio">نمونه کارها</a>
+                    <a href="#about">درباره من</a>
+                    <a href="#skills">مهارت‌ها</a>
+                    <a href="#contact">تماس با من</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>کلیه حقوق این وب‌سایت متعلق به محمد اسماعیل اکرمی می‌باشد. © 2026</p>
             </div>
         </footer>
     </div>
