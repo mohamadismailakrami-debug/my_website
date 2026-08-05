@@ -3,40 +3,17 @@
    (با تغییر کد رنگی --bg-main پس‌زمینه کل سایت عوض می‌شود)
    ========================================== */
 :root {
-    /* پس‌زمینه روشن، تمیز و مات */
-    --bg-main: #f8fafc; 
+    /* پس‌زمینه اصلی کل سایت (قابلیت تعویض آسان با کد HEX) */
+    --bg-main: #060913; 
 
-    /* رنگ آکسان برند شما */
+    /* سایر رنگ‌ها و شفافیت‌ها */
     --accent-orange: #ff6b00;
     --accent-orange-hover: #e05e00;
-
-    /* کارت‌های مدرن و تمیز تم روشن */
-    --card-bg: #ffffff;
-    --card-border: rgba(226, 232, 240, 0.8);
-    
-    /* رنگ متن‌ها با کنتراست عالی و خوانا */
-    --text-primary: #0f172a;
-    --text-secondary: #64748b;
-}
-
-/* استایل کارت‌های تمیز و بدون شیشه‌ی تاریک */
-.glass-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 18px;
-    
-    /* سایه چندلایه مدرن (iOS / Apple Style) */
-    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05),
-                0 2px 6px -1px rgba(15, 23, 42, 0.02);
-    
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* افکت شناور شدن کارت‌ها هنگام هوور */
-.glass-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 107, 0, 0.3); /* هایلایت نارنجی ملایم دور کارت */
-    box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.08);
+    --card-bg: rgba(18, 26, 43, 0.6);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --glass-blur: blur(16px);
 }
 
 * {
