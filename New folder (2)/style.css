@@ -3,22 +3,42 @@
    (با تغییر کد رنگی --bg-main پس‌زمینه کل سایت عوض می‌شود)
    ========================================== */
 :root {
-    /* پس‌زمینه اصلی گرادینت روشن و ثابت */
-    --bg-main: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); 
+    /* پس‌زمینه روشن و ملایم */
+    --bg-main: linear-gradient(135deg, #eef2f6 0%, #dbeafe 100%); 
 
-    /* رنگ اصلی دکمه‌ها و المان‌های فعال */
+    /* رنگ آکسان برند شما */
     --accent-orange: #ff6b00;
     --accent-orange-hover: #e05e00;
 
-    /* کارت‌های شیشه‌ای ویژه پس‌زمینه روشن */
-    --card-bg: rgba(255, 255, 255, 0.65);
-    --card-border: rgba(255, 255, 255, 0.8);
+    /* کارت شیشه‌ای روشن اصلاح‌شده */
+    --card-bg: rgba(255, 255, 255, 0.75);
+    --card-border: rgba(255, 255, 255, 0.9);
     
-    /* رنگ متن‌ها (تیره برای خوانایی روی پس‌زمینه روشن) */
+    /* رنگ متن‌ها (تیره برای خوانایی عالی) */
     --text-primary: #0f172a;
-    --text-secondary: #64748b;
+    --text-secondary: #475569;
     
     --glass-blur: blur(20px);
+}
+
+/* اصلاح استایل کارت‌های شیشه‌ای برای نمایش برجسته در پس‌زمینه روشن */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    
+    /* ایجاد سایه نرم برای جدا شدن شیشه از پس‌زمینه روشن */
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08),
+                0 4px 6px -2px rgba(15, 23, 42, 0.04);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* افکت Hover روی کارت‌ها */
+.glass-card:hover {
+    box-shadow: 0 20px 35px -12px rgba(15, 23, 42, 0.12);
 }
 
 * {
