@@ -15,17 +15,16 @@
     <div class="container">
         <!-- هدر و عنوان صفحه -->
         <header class="page-header glass-card">
-            <a href="#" class="back-btn">→ بازگشت به خانه</a>
+            <a href="index.html" class="back-btn">→ بازگشت به خانه</a>
             <h1>پروژه‌ها و نمونه‌کارها</h1>
             <p>مجموعه‌ای از پروژه‌های طراحی UI/UX، هویت بصری و گرافیک</p>
         </header>
 
         <!-- بخش فیلتر دسته‌بندی‌ها -->
         <div class="filter-container glass-card">
-            <button class="filter-btn active" onclick="filterProjects('all')">همه پروژه‌ها</button>
-            <button class="filter-btn" onclick="filterProjects('uiux')">طراحی UI/UX</button>
-            <button class="filter-btn" onclick="filterProjects('branding')">هویت بصری</button>
-
+            <button class="filter-btn active" onclick="filterProjects(event, 'all')">همه پروژه‌ها</button>
+            <button class="filter-btn" onclick="filterProjects(event, 'uiux')">طراحی UI/UX</button>
+            <button class="filter-btn" onclick="filterProjects(event, 'branding')">هویت بصری</button>
         </div>
 
         <!-- شبکه‌ی نمونه‌کارها -->
@@ -74,12 +73,12 @@
     </div>
 
     <script>
-        function filterProjects(category) {
+        function filterProjects(e, category) {
             const buttons = document.querySelectorAll('.filter-btn');
             const cards = document.querySelectorAll('.project-card');
 
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            e.currentTarget.classList.add('active');
 
             cards.forEach(card => {
                 if (category === 'all' || card.getAttribute('data-category') === category) {
